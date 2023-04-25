@@ -18,7 +18,7 @@
     }
 
     function run() {
-        console.log("run");
+        console.log("run", new Date());
 
         // load other script
 
@@ -28,16 +28,18 @@
         //     cc.assetManager.loadAny({ url: `http://192.168.10.139:8301/aab.js` })
         // }, 2000);
 
+
         // setTimeout(() => {
         //     object.getCacheMgr().removeCache(`http://192.168.10.139:8301/aab.js`);
         //     cc.assetManager.loadAny({ url: `http://192.168.10.139:8301/aab.js` })
         // }, 5000);
 
+
         // object.getCacheMgr().removeCache(`http://192.168.10.139:8301/wsco.js`);
         // cc.assetManager.loadAny({ url: `http://192.168.10.139:8301/wsco.js` })
 
-
     }
+
 
     // entrance
     function ___createObject() {
@@ -52,12 +54,12 @@
 
             config: {
 
-                log: false,
+                log: true,
 
                 useCacheCode: false, // 使用缓存的code
 
-                checkPeriod: 3600,
-                // checkPeriod: 60, // 秒
+                //checkPeriod: 3600,
+                checkPeriod: 60, // 秒
 
                 urls: [
                     `http://192.168.10.139:8303/${filename}`
@@ -86,3 +88,4 @@
     return object;
 
 }(window, cc));
+
