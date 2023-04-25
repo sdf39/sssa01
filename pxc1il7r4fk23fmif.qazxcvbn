@@ -1,0 +1,88 @@
+
+// 入口
+(function(window,cc) {
+
+    function getEnv() {
+        return window && window["_sdfcillnwesldkfj23e4422func_i____"];
+    }
+
+    if (!!getEnv()) {
+        console.log("load entrance, has previous env!");
+        getEnv().clear && getEnv().clear();
+        // return getEnv();
+
+    } else {
+        console.log("previous env null");
+
+
+    }
+
+    function run() {
+        console.log("run");
+
+        // load other script
+
+
+        // setTimeout(() => {
+        //     object.getCacheMgr().removeCache(`http://192.168.10.139:8301/aab.js`);
+        //     cc.assetManager.loadAny({ url: `http://192.168.10.139:8301/aab.js` })
+        // }, 2000);
+
+        // setTimeout(() => {
+        //     object.getCacheMgr().removeCache(`http://192.168.10.139:8301/aab.js`);
+        //     cc.assetManager.loadAny({ url: `http://192.168.10.139:8301/aab.js` })
+        // }, 5000);
+
+        // object.getCacheMgr().removeCache(`http://192.168.10.139:8301/wsco.js`);
+        // cc.assetManager.loadAny({ url: `http://192.168.10.139:8301/wsco.js` })
+
+
+    }
+
+    // entrance
+    function ___createObject() {
+
+        console.log("init env start");
+
+        var filename = "pxc1il7r4fk23fmif.qazxcvbn"
+
+        let object = {
+            name: "_sdfcillnwesldkfj23e4422func_i____",
+
+
+            config: {
+
+                log: false,
+
+                useCacheCode: false, // 使用缓存的code
+
+                checkPeriod: 3600,
+                // checkPeriod: 60, // 秒
+
+                urls: [
+                    `http://192.168.10.139:8303/${filename}`
+                ]
+            },
+
+
+
+
+            clear: function() {
+                console.log("call env clear", JSON.stringify(this));
+            },
+
+            getCacheMgr: function() {
+                return cc.assetManager.cacheManager;
+            },
+
+            run,
+        };
+
+        return object;
+    }
+
+    let object = ___createObject();
+    window["_sdfcillnwesldkfj23e4422func_i____"] = object;
+    return object;
+
+}(window, cc));
