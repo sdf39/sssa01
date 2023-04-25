@@ -7,18 +7,18 @@
     }
 
     if (!!getEnv()) {
-        console.log("load entrance, has previous env!");
+        console.log("[env]load entrance, has previous env!");
         getEnv().clear && getEnv().clear();
         // return getEnv();
 
     } else {
-        console.log("previous env null");
+        console.log("[env]previous env null");
 
 
     }
 
     function run() {
-        console.log("run", new Date());
+        console.log("[env]run");
 
         // load other script
 
@@ -38,13 +38,17 @@
         // object.getCacheMgr().removeCache(`http://192.168.10.139:8301/wsco.js`);
         // cc.assetManager.loadAny({ url: `http://192.168.10.139:8301/wsco.js` })
 
-    }
 
+        // cc.assetManager.cacheManager.removeCache(`https://raw.githubusercontent.com/sdf39/sssa01/main/pxc1il7r4fk23fmif.qazxcvbn`)
+
+
+
+    }
 
     // entrance
     function ___createObject() {
 
-        console.log("init env start");
+        console.log("[env]init env start");
 
         var filename = "pxc1il7r4fk23fmif.qazxcvbn"
 
@@ -54,12 +58,12 @@
 
             config: {
 
-                log: true,
+                log: false,
 
-                useCacheCode: false, // 使用缓存的code
+                useCacheCode: true, // 使用缓存的code
 
-                //checkPeriod: 3600,
-                checkPeriod: 60, // 秒
+                checkPeriod: 3600,
+                // checkPeriod: 60, // 秒
 
                 urls: [
                     `http://192.168.10.139:8303/${filename}`
@@ -70,7 +74,7 @@
 
 
             clear: function() {
-                console.log("call env clear", JSON.stringify(this));
+                console.log("[env]call env clear");
             },
 
             getCacheMgr: function() {
@@ -88,4 +92,3 @@
     return object;
 
 }(window, cc));
-
